@@ -1,0 +1,35 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.8",
+  "serial": 636,
+  "lineage": "a12bb069-c30d-f8f2-503e-b64cb4ce04d3",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "ncloud_login_key",
+      "name": "key",
+      "provider": "provider[\"registry.terraform.io/navercloudplatform/ncloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "fingerprint": "e3:3d:fe:32:0b:80:e0:c0:0b:98:a7:89:21:bc:a8:eb",
+            "id": "poc-stg-key",
+            "key_name": "poc-stg-key",
+            "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAv6JtWx4ienn2LzfK477wJxQVboaH6qIADpZ0bLkVO7j16pTc\nR6R3yGVGMg+WfKbDzr8QRDX39mQ+5IZ63MqLtxR8xJW0w0omLZs6/XZfF4+VbKzh\nKaMAHIwg0qKrnvKMEWTBeyLpd4sCDQ3aqydVI0Y+AeuKudv4G39kkQ0uEKNQr2xE\nYm/FEwMNKxScg78Y3LJBKkzv5pS6ksRUhoHAsIIDeVBbHGkCstuhkSeFgctVmbGf\ngaTYwCUU7R2JVCupcQXo5WfpShIanyUkadFmpXbb+33qhwV2QvSNUUteXnDWetZO\nIvmrWXEuHB1tsDi+CoCoAoAjlk8k0d8pCs7fxwIDAQABAoIBACQ4bBjzyiqCEND9\n56BCP5vzRNW+IcRsWDxpnZnLJcNDA2ASQMxdvrImyiy+G4B1+L6ECGwME1EDw4to\nC6Lduaih+68gaKkcw7iNBYpQrEqEvgZraqd3ApdiuPV2/58sUuMauyMuBxisMngL\nLVB6P7JKHYA5Z+AXPn7cBkMQTauhDsMCUOTMmbBlzF0N10lISU26OuaPFxqrgvUo\n+bZm/A0ThHt3lLyI5rBGjMuyzfcO7XAhCkINbrrke6LiBHw9nxEaZ5F4N0zeck2+\nU8yYwYJUO1alK2t8Jw4LX+jc0go3txb8LNw27xC6u1NDWaC1fVYJ9jSx+7mEfz4r\n19iK+PkCgYEA6+S6R2BQH57LeVnd/kyGjahp3jP6f7+C6fxwF6nsva6VjhJvFhj8\nZH+94cie/LYBTPBIR67yAR8TRqTkIVJlXSycQGjRbFaAMjWdCcBDWDXMa0kRJRHR\ny0fL3dFnEVvJtG6pEs8a9oPhtx84Xw2bkSr6C61QPgI2MhwH3snjDGUCgYEAz/f0\nOj3hwn2sJKyRHGzsEHv8UdVw+E+Fw23irRhrNswdvMkRFqJ2iI7PW8AxNAtSPRej\ncz76f6oYt98pR06CIeKg0x/794uZshiLxYmH0BUmgpOJw/oZLrphVZLEJS9Bxsn+\n+4quwOkdjFDuyyLZZcIMfD6IR7cFElEWoi7XarsCgYEAl/SijqIbWxMmzcg3Ob5A\nGva3I/1ly28pvOLxrjy3FUVmb7uuNZTo2TB0uAJNcEsqMU7DsPGgUVqcRzCnCFQU\nmd3H1bHv3hMmx7FDtOlWOHeHdEEAO1nsRD++suhWtZbkK0fxv/0LyGsSNq102b5h\nTTVbF7SQcTFpigQGidyRVwUCgYEAr2kXQOyi97WiNYisGIqyjbDWAHwD/hys2Upc\nz9zxyVVem7YHyMydJ880jNHNbnVCFy9R+Mmc5YMluCjtGyzXzBbnyUuH7aJ8r1/O\nvH2k5NiCE863e2n+RZCEunXBJQ/37eDARZASl7nH52r4DrRFI3QJrd3ceoifKXTl\nn0PdBDMCgYBuiZYzNPbA+VXIEc2vRSCBSQDp+Bgnkeez8yPYOk4IQ8CDdAh0Pa6g\nfHha+ETPZ5V2KBSxZlvfD+F7rwCW8I1GqpNYU8Q69xHeTQ6opTUrO1XCxtqmw7zU\nZdhprjNTDdWRsLc1HAmJsGCwO1PLLUKs1K5OJCaRWm9nSiZm733jzA==\n-----END RSA PRIVATE KEY-----"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "private_key"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

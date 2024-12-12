@@ -1,0 +1,80 @@
+# Cluster Information
+Cluster: bof-1
+  Name: poc-stg-bof-k8s-1
+  K8s Version: 1.29.9-nks.2
+  VPC No: 83144
+  Zone: KR-1
+  UUID: 8f0520d9-96fe-4a31-8310-dd9f980e343c
+---
+Cluster: bof-2
+  Name: poc-stg-bof-k8s-2
+  K8s Version: 1.29.9-nks.2
+  VPC No: 83144
+  Zone: KR-2
+  UUID: 2c750abb-cc9c-4321-8c0c-10e28dee0fcc
+---
+Cluster: cmn-1
+  Name: poc-stg-cmn-k8s-1
+  K8s Version: 1.29.9-nks.2
+  VPC No: 83144
+  Zone: KR-1
+  UUID: 027595fe-c928-4f5a-acd3-ff525052a4e8
+---
+Cluster: cmn-2
+  Name: poc-stg-cmn-k8s-2
+  K8s Version: 1.29.9-nks.2
+  VPC No: 83144
+  Zone: KR-2
+  UUID: 404c42e4-b411-448c-a12b-560bba84bb65
+---
+# Bastion Server Info
+Server Name: poc-stg-cmn-bst-1
+Private IP: 10.102.7.6
+Public IP: 211.188.56.11
+Server Spec: mi1-g3
+Image: ubuntu-22.04-base
+Zone: KR-1
+
+# Cluster UUID Mapping & Kubeconfig Commands
+poc-stg-bof-k8s-1:8f0520d9-96fe-4a31-8310-dd9f980e343c
+Command: ncp-iam-authenticator update-kubeconfig --clusterUuid 8f0520d9-96fe-4a31-8310-dd9f980e343c --region KR
+Command: kubectl config rename-context nks_kr_poc-stg-bof-k8s-1_8f0520d9-96fe-4a31-8310-dd9f980e343c sb1
+poc-stg-bof-k8s-2:2c750abb-cc9c-4321-8c0c-10e28dee0fcc
+Command: ncp-iam-authenticator update-kubeconfig --clusterUuid 2c750abb-cc9c-4321-8c0c-10e28dee0fcc --region KR
+Command: kubectl config rename-context nks_kr_poc-stg-bof-k8s-2_2c750abb-cc9c-4321-8c0c-10e28dee0fcc sb2
+poc-stg-cmn-k8s-1:027595fe-c928-4f5a-acd3-ff525052a4e8
+Command: ncp-iam-authenticator update-kubeconfig --clusterUuid 027595fe-c928-4f5a-acd3-ff525052a4e8 --region KR
+Command: kubectl config rename-context nks_kr_poc-stg-cmn-k8s-1_027595fe-c928-4f5a-acd3-ff525052a4e8 sc1
+poc-stg-cmn-k8s-2:404c42e4-b411-448c-a12b-560bba84bb65
+Command: ncp-iam-authenticator update-kubeconfig --clusterUuid 404c42e4-b411-448c-a12b-560bba84bb65 --region KR
+Command: kubectl config rename-context nks_kr_poc-stg-cmn-k8s-2_404c42e4-b411-448c-a12b-560bba84bb65 sc2
+
+# Nodepool Details
+Cluster: bof-1
+Nodes:
+  - poc-stg-bof-np-1-w-bcef: private_ip=10.102.5.6, public_ip=
+  - poc-stg-bof-np-1-w-4103: private_ip=10.102.5.7, public_ip=
+---
+Cluster: bof-2
+Nodes:
+  - poc-stg-bof-np-2-w-b9db: private_ip=10.102.105.7, public_ip=
+---
+Cluster: cmn-1
+Nodes:
+  - poc-stg-cmn-np-1-w-5a28: private_ip=10.102.10.7, public_ip=
+  - poc-stg-cmn-np-1-w-a360: private_ip=10.102.10.6, public_ip=
+---
+Cluster: cmn-2
+Nodes:
+  - poc-stg-cmn-np-2-w-bcf3: private_ip=10.102.110.6, public_ip=
+---
+
+# bashrc alias
+alias pb1='kubectl config use-context pb1'
+alias pb2='kubectl config use-context pb2'
+alias pc1='kubectl config use-context pc1'
+alias pc2='kubectl config use-context pc2'
+alias sb1='kubectl config use-context sb1'
+alias sb2='kubectl config use-context sb2'
+alias sc1='kubectl config use-context sc1'
+alias sc2='kubectl config use-context sc2'

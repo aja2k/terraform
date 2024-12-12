@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: proxy-server
+  labels:
+    app: proxy-server
+spec:
+  selector:
+    matchLabels:
+      app: proxy-server
+  template:
+    metadata:
+      labels:
+        app: proxy-server
+    spec:
+      containers:
+      - name: squid
+        image: ubuntu/squid:5.2-22.04_beta
+        ports:
+        - containerPort: 3128
+        volumeMounts:
+        - name: certs
+          mountPath: /etc/squid/certs
+          readOnly: true
+        - name: squid-ssl-config
+          mountPath: /etc/squid/conf.d/ssl.conf
+          subPath: ssl.conf
+      volumes:
+      - name: certs
+        configMap:
+          name: squid-cert
+      - name: squid-ssl-config
+        configMap:
+          name: squid-config
+          items:
+            - key: ssl.conf
+              path: ssl.conf
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: squid-config
+data:
+  ssl.conf: |
+    acl SSL_ports port 443 6443
+    acl CONNECT method CONNECT
+    http_access allow CONNECT SSL_ports
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: proxy-server
+  annotations:
+    service.beta.kubernetes.io/ncloud-load-balancer-layer-type: "nplb"
+    service.beta.kubernetes.io/ncloud-load-balancer-internal: "true"
+    service.beta.kubernetes.io/ncp-load-balancer-connection-idle-timeout: "3600"
+spec:
+  selector:
+    app: proxy-server
+  ports:
+    - protocol: TCP
+      port: 3128
+      targetPort: 3128
+      #nodePort: 31280
+  type: LoadBalancer
+
+

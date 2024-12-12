@@ -1,0 +1,47 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.8",
+  "serial": 67,
+  "lineage": "a12bb069-c30d-f8f2-503e-b64cb4ce04d3",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "ncloud_login_key",
+      "name": "loginkey",
+      "provider": "provider[\"registry.terraform.io/navercloudplatform/ncloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "fingerprint": "15:65:8f:fe:d7:52:19:17:2c:ca:d8:6f:d1:a4:6d:a4",
+            "id": "poc-stg-bof-key2",
+            "key_name": "poc-stg-bof-key2",
+            "private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQEAk0hZn/ULWsO9Dka/z3/z2Qiite0xNcX79NhXzfXE/QNp2UAn\n0bQslEsdpTO+iBSmZbL7dxrAChTv4YPDXa0pM1pRbzneJ13wO/yoe3uDSUZPBNyf\ng11ZEtF4YDuraVSEkO4NlSj9h0jPo6Y8q0D/PPLWtwi47qd/QRYjCySqspmgBO68\nMjIJGavArcLbjGres0tH3djkKs9vUMoc8AEaRymBNxTZzspyIqFHvGyKJlJuy/0v\n1cT68N7xq798yobvuDZgCCkS5414e6uXUAhwQdnR25jIz6diWGfNen3lPR0cii+Y\nBWsGhgNcZCrlr2eYTqngZ1UNS/pk+6PffIYuWQIDAQABAoIBADZhcmYzTjv3JekN\nimkNL3YlUB6oM5FNRtiCwPjVFCTvi7ehjpJJWmRuz8Vds63/IelPCrZRdDLExEWa\nJxqBg0LoyESvMy2J69faVEMzuafmg+qho2wXnXnrSe0OWx4LDN+OZgl7FxFKexBL\nov8Agr14VHtEhzPnOH9Jsyq8ISLMMXQBeQpooJ2M2qpo+ZhOcK+txkX8u3If1o5q\nnG4dolkrNPXkAbSMy38m/6oyC78v6VmFArSC2ez/gBakBFszTNKkeVbbcdPsuJm3\nfWI9rIFCjNlR8HKay6J0lVabeFzuo+NjGSStByQSXDYkU3F3bM2zlkK9CkCQHP4B\nphceV9kCgYEA4KkSWTdKHelP0PyhkO7tMWnPYYiq+12IMzRLi93V96Qd9AesRUY7\n3OJVf4vKhZBsW0PAR+MvSVbiF/qt2y2/sR/yuiOxdFtaoCIVtluCiOgqWPaNbkDY\naxAGq4p/wpVnopSIUA1zUxpGmgdFDIEYLEhbWLoFGQyC6g9SS6E+9/sCgYEAp9QD\nAvESE8pr+OzHyjBlWt9TVsB2/27FBDpxYDUqF/bhgfWdGb5ArQi/vp0THLbzzXtD\nhr/O8dy/7DmrNliAqJnQ97hy310X54mNK7ut7Z/mdnZ7PmkyOB8C/9aNIyMzuN1E\noiDocoPn642/bazk3RBlNmyCqUPy0cHo4ge0/rsCgYBZtQk/mKU+xl/5qjb1gYIy\n/fYyEvl7P8DX+WTFJ8J9jQns3Hd8fev/al0Lfg1TQfUSiD4qNlw2Y7wKKS3s3Bq0\nJnasvv3n4WaRlKqo02ePNW1bcq/Mu5XvQkn3i2kykKf+MmMv2/8VyuMwNADtWksF\nu6rGBhltBCLuRUnuKyfSqwKBgF2x82x1Ac6it9zk9DVhB3TQMUrBcK3yPXO63QkF\nJVbzsbpIUUjJ+nmf5MyaDM1/JmWVZ4GXHAXTZCKRn5BboJiAJzXld9xTsMDG/lVo\nFhYPqy5/vxZ8zFigl6AVO/5d7MZMYcDR9nPYSGYtYK3uVGdGe/sCYX/2O133j/iA\nrP95AoGACrp7GnXddf8VDl6B4tcvA6sZdpdPTBuei6v4zLXDEsjpFuaabwm3gB3V\n9clgTDfLuzDNygYblzUp/xmYHYTTE++fJAiHs1OO+KA2/EMX9HhGLPVRZB7hwHkd\noGFjNP9XADtiLL95yqTIUBAvaNmN6gBzeFx+c3dAi/bsCGVXCH4=\n-----END RSA PRIVATE KEY-----"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "private_key"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": [
+    {
+      "object_kind": "var",
+      "config_addr": "var.cluster",
+      "status": "unknown",
+      "objects": [
+        {
+          "object_addr": "var.cluster",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

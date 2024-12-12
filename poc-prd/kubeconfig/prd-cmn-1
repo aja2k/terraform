@@ -1,0 +1,28 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2VENDQWRHZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQ0FYRFRJME1URXhOekU1TURReU4xb1lEekl4TWpReE1ESTBNVGt3TkRJM1dqQVZNUk13RVFZRApWUVFERXdwcmRXSmxjbTVsZEdWek1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBCjZhZkd1UGNTSTFoSUpCYVpnLzNyNi9zNXZuL1pXVnN2MkxRSW0wK3ZKYmU0dENmb0srK3c0c3QzTElHSWp4Y1QKNlhRS1dWT3N6Y0oybTNxTVFCWldZZVRUZ1FSMFdaNDhuTUNaeERKNGI5ZkpNSk4rRFhsdEVoeUN0T3ZmQ2t5RQpDV2tJUWVVWnc5VWU0UlY1ZmtMVEFzRzBXNGlGbDl3UE9VVXd3Z3R2TFhxUjN5UmlEVUVmM240S2ZlM3lXSEgwCkxJU0ZndzdFK3luSjc4czlDenh4RnJ1Q3B3TUdCSGVDdWlIOCsvTzN5dHdjOXdvYkllTm82WTQxRzh6ek1OUFoKTWNuWTVoRDdhTmk1WThJK2xHMXo4RTVmZXIxVWxXUTkyWENvTG8wd0VnMnVaMXdmOW8vL282NS9sZndYNmpzZwp4WVRJMUZtc1VSaDR1MmZrVkNuVFN3SURBUUFCbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQXFRd0R3WURWUjBUCkFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVVaMlZxQm1pUHFwdy9yczhKWEE0Uk5NOWdzMnd3RFFZSktvWkkKaHZjTkFRRUxCUUFEZ2dFQkFOdUpnRTRQaEJWOXppclpXaldTOE8wK0g0VTFWRGM5NXQyNlV1enVKaUs3ZnI1aQpSYUwwVXFoZ3JKeldmTEoxQ3cwKzZ1N2F0eERHQWswNjErZ01GN2d4M3FIbHVlYlRKT1daMFdrYjlpSFN3Sk56CmZNRkIzcW4zc1kvNm4xa3EvR1JwWHkvNTZWRXRRRkFlZUxISUxUYkFIbXc3cVhFOFNKQ0IxN0diUkVOeVR4MHgKcm13SVdmaDJENUZZcGlQSGNCU1hiVXZ2bG1INkd3NFZ3SUpIQ2ZXajB0QzJ1ZjdPMm5CN3JEdU94dVJCd3ZlRworNy9yV3JqTW1zM1RWekp3T01la2I4SDFtWFYyN1c5cXVrdzNWekh1YmQ4Q1dvS0NMTzlIbnlsLzBrUHc4WkQ1CnJTMmY1Q2wycmRqL0FPd2xicUtyRUx1emlpZDRGYmZPZzA0di9FOD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad.kr.vnks.ntruss.com
+  name: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+contexts:
+- context:
+    cluster: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+    user: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+  name: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+current-context: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+kind: Config
+preferences: {}
+users:
+- name: nks_kr_poc-prd-cmn-k8s-1_bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - token
+      - --clusterUuid
+      - bb60b5bd-ed63-4248-8cfa-36f1c5cd54ad
+      - --region
+      - KR
+      command: ncp-iam-authenticator
+      env: null
+      provideClusterInfo: false
