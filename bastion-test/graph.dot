@@ -1,0 +1,25 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.ncloud_root_password.default" [label="data.ncloud_root_password.default"];
+  "data.ncloud_server_image_numbers.kvm-image" [label="data.ncloud_server_image_numbers.kvm-image"];
+  "data.ncloud_server_specs.kvm-spec" [label="data.ncloud_server_specs.kvm-spec"];
+  "local_file.bastion_svr_root_pw" [label="local_file.bastion_svr_root_pw"];
+  "local_sensitive_file.ssh_key" [label="local_sensitive_file.ssh_key"];
+  "ncloud_init_script.init" [label="ncloud_init_script.init"];
+  "ncloud_login_key.loginkey" [label="ncloud_login_key.loginkey"];
+  "ncloud_public_ip.bastion_ip" [label="ncloud_public_ip.bastion_ip"];
+  "ncloud_server.bastion_server" [label="ncloud_server.bastion_server"];
+  "ncloud_subnet.test3" [label="ncloud_subnet.test3"];
+  "ncloud_vpc.test3" [label="ncloud_vpc.test3"];
+  "data.ncloud_root_password.default" -> "ncloud_server.bastion_server";
+  "local_file.bastion_svr_root_pw" -> "data.ncloud_root_password.default";
+  "local_sensitive_file.ssh_key" -> "ncloud_login_key.loginkey";
+  "ncloud_public_ip.bastion_ip" -> "ncloud_server.bastion_server";
+  "ncloud_server.bastion_server" -> "data.ncloud_server_image_numbers.kvm-image";
+  "ncloud_server.bastion_server" -> "data.ncloud_server_specs.kvm-spec";
+  "ncloud_server.bastion_server" -> "ncloud_init_script.init";
+  "ncloud_server.bastion_server" -> "ncloud_login_key.loginkey";
+  "ncloud_server.bastion_server" -> "ncloud_subnet.test3";
+  "ncloud_subnet.test3" -> "ncloud_vpc.test3";
+}
